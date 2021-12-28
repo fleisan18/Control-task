@@ -22,6 +22,28 @@ void PrintArray(int[] array)
     {
         Console.Write($"{array[i]} ");
     }
-    System.Console.WriteLine();
+    Console.WriteLine();
 }
+
+int[] IsEven (int[] array)
+{
+    int length = array.Length;
+    int[] b = CreateArray(length);
+    int count = 0;
+    for (int i = 0; i < length; i++)
+    {
+        if(array[i] %2 ==0) b[count++] = array[i];
+    }
+    Array.Resize(ref b, count);
+    return b;
+}
+
+Random r = new Random();
+int [] a= FillArray(CreateArray(r.Next(10,20)));
+int [] b = IsEven(a);
+
+PrintArray(a);
+PrintArray(b);
+
+
 
