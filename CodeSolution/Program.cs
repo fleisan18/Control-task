@@ -6,7 +6,7 @@ int[] CreateArray (int n)
     return array;
 }
 
-int[] CreateArray (int[] array)
+int[] FillArray (int[] array)
 {
     int length = array.Length;
     for (int i = 0; i < length; i++)
@@ -14,4 +14,12 @@ int[] CreateArray (int[] array)
         array[i] = new Random().Next (-100,100);
     }
     return array;
+}
+
+void PrintArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"{array[i]} ");
+    }
 }
